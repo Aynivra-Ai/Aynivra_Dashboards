@@ -43,9 +43,9 @@ window.AYNIVRA_CONFIG = {
       bookingNoun: "Site visit",
       bookingPlural: "site visits",
       endpoints: {
-        payload: "",           // → GET ?action=payload   {outboundLeads,inboundLeads,generatedAt}
-        sheet:   "",           // → GET ?action=sheeturl   {ok,url}
-        ack:     ""            // → GET ?action=ack&leadId=..&type=visit|callback|pickup
+        payload: "https://script.google.com/macros/s/AKfycbxqDe3SVLjJD0Sd-H4jVSzgQGF4JjxB5RADYjy3ZJUL_oDha11yO3E6wCtyYgTFjSEC/exec",           // → GET ?action=payload   {outboundLeads,inboundLeads,generatedAt}
+        sheet:   "https://script.google.com/macros/s/AKfycbxqDe3SVLjJD0Sd-H4jVSzgQGF4JjxB5RADYjy3ZJUL_oDha11yO3E6wCtyYgTFjSEC/exec",           // → GET ?action=sheeturl   {ok,url}
+        ack:     "https://script.google.com/macros/s/AKfycbxqDe3SVLjJD0Sd-H4jVSzgQGF4JjxB5RADYjy3ZJUL_oDha11yO3E6wCtyYgTFjSEC/exec"            // → GET ?action=ack&leadId=..&type=visit|callback|pickup
       }
     },
     {
@@ -55,7 +55,7 @@ window.AYNIVRA_CONFIG = {
       accent: "#2563eb",       // blue
       bookingNoun: "Demo / meeting",
       bookingPlural: "demos booked",
-      endpoints: { payload: "", sheet: "", ack: "" },   // ONE shared URL for both sub-agents below
+      endpoints: { payload: "https://script.google.com/macros/s/AKfycbwk0yefn3z3omobLHFQBBRr08JQnzY9pODPTlVI9KHESMkm1FqXJXXUcqFJeSBVyPL4/exec?secret=test1followupagent", sheet: "https://script.google.com/macros/s/AKfycbwk0yefn3z3omobLHFQBBRr08JQnzY9pODPTlVI9KHESMkm1FqXJXXUcqFJeSBVyPL4/exec?secret=test1followupagent", ack: "https://script.google.com/macros/s/AKfycbwk0yefn3z3omobLHFQBBRr08JQnzY9pODPTlVI9KHESMkm1FqXJXXUcqFJeSBVyPL4/exec?secret=test1followupagent" },   // ONE shared URL for both sub-agents below
       // Two agents share the same endpoint. Each pill filters the shared rows.
       // Exact split: set filterField to a row field + filterValue to match
       // (e.g. filterField:"type", filterValue:"payment"). If filterField is "",
@@ -72,7 +72,7 @@ window.AYNIVRA_CONFIG = {
       accent: "#db2777",       // rose
       bookingNoun: "Photoshoot",
       bookingPlural: "shoots booked",
-      endpoints: { payload: "", sheet: "", ack: "" }
+      endpoints: { payload: "https://script.google.com/macros/s/AKfycbyj-EcfSIgzx2LW0vvnrQfKaoQ4Wjj5czxhOmqv2BlfQj3mPg_IGgVu-pheywjR1Aqa/exec", sheet: "https://script.google.com/macros/s/AKfycbyj-EcfSIgzx2LW0vvnrQfKaoQ4Wjj5czxhOmqv2BlfQj3mPg_IGgVu-pheywjR1Aqa/exec", ack: "https://script.google.com/macros/s/AKfycbyj-EcfSIgzx2LW0vvnrQfKaoQ4Wjj5czxhOmqv2BlfQj3mPg_IGgVu-pheywjR1Aqa/exec" }
     },
     {
       slug: "travel",
@@ -81,7 +81,7 @@ window.AYNIVRA_CONFIG = {
       accent: "#0d9488",       // teal
       bookingNoun: "Trip consult",
       bookingPlural: "consults booked",
-      endpoints: { payload: "", sheet: "", ack: "" }
+      endpoints: { payload: "https://script.google.com/macros/s/AKfycbyj-EcfSIgzx2LW0vvnrQfKaoQ4Wjj5czxhOmqv2BlfQj3mPg_IGgVu-pheywjR1Aqa/exec", sheet: "https://script.google.com/macros/s/AKfycbyj-EcfSIgzx2LW0vvnrQfKaoQ4Wjj5czxhOmqv2BlfQj3mPg_IGgVu-pheywjR1Aqa/exec", ack: "https://script.google.com/macros/s/AKfycbyj-EcfSIgzx2LW0vvnrQfKaoQ4Wjj5czxhOmqv2BlfQj3mPg_IGgVu-pheywjR1Aqa/exec" }
     }
     // ,{  // 5th agent (payment follow-up) — uncomment and fill if it gets its own tab
     //   slug: "payments", label: "Payment Follow-up", agent: "Maya",
